@@ -6,6 +6,7 @@ let maxPriceInput=document.getElementById("max-price");
 let form=document.getElementById("form");
 let subBtn=document.getElementById("sub");
 let resetBtn=document.getElementById("res");
+let currentProducts;
 let categoryList;
 form.addEventListener("submit",function(e){
   e.preventDefault();
@@ -17,7 +18,8 @@ let productsList;
 async function getAllProducts() {
   let requset = await fetch(`${baseApi}products`);
   productsList = await requset.json();
-  displayAllProducts(productsList,page)
+  currentProducts=productsList;
+  displayAllProducts(currentProducts,page)
   console.log(productsList);
   return productsList;
 }
@@ -76,14 +78,14 @@ function displayAllProducts(arr,page) {
 }
 
 document.getElementById("btnNext").addEventListener("click", () => {
-  if (page * numitems < productsList.length) {
+  if (page * numitems < currentProducts.length) {
     page++;
    
   }
   else{
     page=1;
   }
-   displayAllProducts(productsList,page); 
+   displayAllProducts(currentProducts,page); 
 });
 document.getElementById("btnPrev").addEventListener("click", () => {
   if (page >1) {
@@ -91,9 +93,9 @@ document.getElementById("btnPrev").addEventListener("click", () => {
    
   }
   else{
-    page=Math.ceil(productsList.length/numitems);
+    page=Math.ceil(currentProducts.length/numitems);
   }
- displayAllProducts(productsList,page);
+ displayAllProducts(currentProducts,page);
 });
 async function searchByCategoryandPrice(id,minPrice,maxPrice){
  let allProducts=await getAllProducts();
@@ -102,8 +104,9 @@ async function searchByCategoryandPrice(id,minPrice,maxPrice){
   })
   console.log(filterByCategorAndprice);
   if(filterByCategorAndprice.length>0){
-
-    displayAllProducts(filterByCategorAndprice,page);
+currentProducts=filterByCategorAndprice;
+page=1;
+    displayAllProducts(currentProducts,page);
   }
   else{
     showAllProducts.innerHTML=`<h3 class="text-center text-danger">No Products available for this filter</h3>`
@@ -120,6 +123,7 @@ subBtn.addEventListener("click",()=>{
 resetBtn.addEventListener("click",()=>{
   minPriceInput.value='';
   maxPriceInput.value='';
- 
-  getAllProducts();
+ page = 1;
+  currentProducts = productsList;
+  displayAllProducts(currentProducts, page);
 })
