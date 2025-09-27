@@ -1,0 +1,192 @@
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.details ,.product,.create-newProduct,.admin-page {
+background-color: #f9f9f9;
+   min-height: 100vh;
+}
+/***** Nav *****/
+nav .my-nav li a {
+  color: white;
+}
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+/***** End Nav *****/
+/***** Aside *****/ 
+aside {
+  position: fixed;
+  top: 8%;
+  left: 0;
+
+  bottom: 0;
+  width: 15%;
+  float: left;
+}
+
+a {
+  color: inherit;
+}
+aside .content h4,
+aside .content p,
+aside .content label {
+  color: #525558;
+}
+
+
+.clear {
+  clear: both;
+}
+aside .content input,
+aside .content select,
+aside .content button {
+  width: 100%;
+}
+aside .content label {
+  margin-bottom: 4px;
+}
+aside .content select {
+  background-color: #efefef;
+}
+
+/***** End Aside *****/
+/***** product *****/
+.product{
+      float: right;
+  width: 85%;
+  padding-top: 15px;
+    padding-left: 15px;
+}
+
+ .product .inner{
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+ }
+.product .inner .title-product 
+,.details .content .title-product
+{
+    color: #1881e8;
+    
+}
+.product .inner .Category{
+    background-color: #1A1A1A;
+    color: #fff;
+    border-radius: 15px;
+    padding: 5px;
+}
+.product .inner .price{
+    color: #86C88B;
+}
+/***** End product *****/
+
+/***** page Details product *****/ 
+.details .content
+,.create-newProduct .content,
+.admin-page .content
+{
+    margin: auto;
+   padding: 30px;
+    width: 80%;
+    background-color: #fff;
+    border-radius: 11px;
+    
+}
+.details .content a{
+    color: #1881e8;
+}
+.details .content .price{
+    color: #535759;
+    font-weight: 500;
+    font-size: 18px;
+}
+/***** End page Details product *****/
+/***** createNewProduct *****/
+.create-newProduct{
+    padding-top: 30px;
+}
+.butt{
+    text-align: right;
+   padding-top:25px ;
+}
+.butt button{
+    color:#fff
+}
+.create-newProduct .title h3,.admin-page .title h3{
+    color: #1881e8;
+}
+/***** End createNewProduct *****/
+/***** adminpage *****/ 
+.admin-page .body table{
+    width: 100%;
+   
+}
+.admin-page .body thead td{
+    text-transform: uppercase;
+}
+table thead{
+  background-color: #017BFD; 
+   color: #fff; 
+}
+
+table, th, td {
+  border: 1px solid #dfdede;
+  border-collapse: collapse;
+  text-align: center;
+  padding: 5px 0;
+}
+.page-item:last-child .page-link,.page-item:first-child .page-link{
+    border-radius: 8px;
+}
+.next-prev .my-pag .page-link {
+    box-shadow: unset;
+    border: unset;
+   background-color: #eee;
+
+}
+
+.next-prev .pagination .page-link:focus,
+.next-prev .pagination .page-link:active {
+  background-color: #1881e8;
+  color: #fff;        
+  outline: none;      
+}
+.admin-page .content .my-search i{
+    padding: 10px;
+    background-color: #1881e8;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+}
+ /***** End adminpage *****/
+#back{
+  cursor: pointer;
+}
+.confirm-delete {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.647);
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.confirm-delete .content{
+  background-color: #fff;
+  width: fit-content;
+  padding: 25px;
+  border-radius: 15px;
+
+}
+.confirm-delete .content .btns{
+  text-align: center;
+  padding: 15px;
+}
+
+
+
+

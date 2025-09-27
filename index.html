@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products</title>
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-primary ">
+    <div class="container">
+      <a class="navbar-brand text-white" href="#">E-Commerce</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 my-nav">
+          <li class="nav-item ">
+            <a class="nav-link active " href="index.html">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./html/admin.html">Admin</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./html/createProduct.html">Create</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+  <aside>
+    <div class="container">
+      <div class="content">
+        <h4 class="pt-3">Filter Products </h4>
+        <form id="form">
+          <label for="category" class="pt-3">category</label>
+ <select name="category" id="category" class="form-control">
+  
+ </select>
+ <div class="min-price pt-3">
+   <label for="min-price">Min price</label>
+   <input type="number" name="min-price" id="min-price" placeholder="e.g,10" class="form-control">
+
+ </div>
+ <div class="max-price py-3">
+
+   <label for="max-price">Max price</label>
+   <input type="number" name="max-price" id="max-price" placeholder="e.g,100" class="form-control">
+ </div>
+ <button  class=" btn bg-primary text-white" id="sub">Apply Filters</button>
+ <button type="reset" class="mt-3 btn bg-primary text-white" id="res">Reset</button>
+</form>
+      </div>
+    </div>
+  </aside>
+  <section class="product ">
+   <div class="container my-3">
+    <div class="content py-5">
+      <div class="row gy-2" id="showAllProducts">
+        
+      </div>
+    </div>
+     <div class="next-prev text-center py-3 d-flex justify-content-center">
+                  
+                                <nav aria-label="Page navigation example ">
+                    <ul class="pagination my-pag">
+                      <li class="page-item me-2" id="btnPrev"><a class="page-link" href="#"><span class="pe-1"><i class="fa-solid fa-angles-left "></i></span></a></li>
+                      
+                      <li class="page-item ms-2" id="btnNext"><a class="page-link" href="#"> <span class="ps-1"><i class="fa-solid fa-angles-right"></i></span></a></li>
+                    </ul>
+                  </nav>
+
+              </div>
+   </div>
+   
+  </section>
+  <div class="clear"></div>
+
+
+  <script src="js/main.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
