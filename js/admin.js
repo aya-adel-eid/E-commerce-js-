@@ -113,7 +113,7 @@ searchByNameProduct(searchInput.value);
  function EditProduct(id){
  /*  let products=await getProducts()
   let productOfID=products.find((item)=>item.id=id);
-   */
+   */ 
    localStorage.setItem("idProductToEdit",JSON.stringify(id));
     location.href="../html/createProduct.html"
   console.log(productOfID);

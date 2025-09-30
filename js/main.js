@@ -59,7 +59,7 @@ function displayAllProducts(arr,page) {
   for (let i = start; i < end&&i<arr.length; i++) {
  
     box += `
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-md-6">
           <div class="inner shadow">
             <div class="imge">
               <img src="${arr[i].images[0]}" alt="" class="w-100">

@@ -1,0 +1,29 @@
+
+/* small */
+@media screen and (min-width:640px){
+ 
+}
+/* mediam */
+@media screen and (min-width:768px){
+    .product{
+        width: 70%;
+    }
+    aside{
+        width: 30%;
+    }
+  
+}
+/* large */
+@media screen and (min-width:1024px) {
+     .product{
+        width: 85%;
+    }
+    aside{
+        width: 15%;
+    }
+
+}
+/* X large */
+@media screen and (min-width:1280px) {
+    
+}
